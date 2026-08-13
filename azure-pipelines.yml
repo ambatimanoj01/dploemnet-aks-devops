@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'b0460ffa-f227-47a0-bec5-aed9a6aa0bcd'
   imageRepository: 'blob1'
   containerRegistry: 'acrcontainerregistry123.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
