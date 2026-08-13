@@ -3,17 +3,17 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+- main
 
 resources:
 - repo: self
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6dd6f924-3bc8-4a74-a0f3-57ed829480ba'
-  imageRepository: 'ambatimanojazuredevopsgithubacraksapp'
-  containerRegistry: 'acrcontainerregistry123.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  dockerRegistryServiceConnection: '1f89a761-dc71-40c4-b325-d6e35099b319'
+  imageRepository: '<image-repository-name>'
+  containerRegistry: '<container-registry-name>.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
